@@ -12,7 +12,7 @@ interface Props {
   rightText?: string;
   onRightClick?: () => void;
 }
-const WeUiDialog: FC<Props> = ({
+const WeUIDialog: FC<Props> = ({
   show,
   title,
   content,
@@ -44,4 +44,4 @@ const WeUiDialog: FC<Props> = ({
   );
 };
 
-export default WeUiDialog;
+export default WeUIDialog;

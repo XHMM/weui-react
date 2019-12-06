@@ -1,3 +1,4 @@
-import WeUiDialog from './WeUIDialog';
+import WeUIDialog from './WeUIDialog';
 
-export { WeUiDialog };
+export { WeUIDialog };
+
