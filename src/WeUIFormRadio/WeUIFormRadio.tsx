@@ -1,24 +1,21 @@
-import React, { FC, RefObject } from 'react';
+import React, { FC } from 'react';
 import { FormControlLabel, Radio } from '@material-ui/core';
 import { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
 
 interface Props extends Omit<FormControlLabelProps, 'control'> {
   label: string;
   value: string;
-  refForward?: RefObject<any>;
 }
-const WeUIFormRadio: FC<Props> = ({ label, value, refForward, ...props }) => {
+const WeUIFormRadio: FC<Props> = ({ label, value, ...props }) => {
   return (
-    <>
       <FormControlLabel
+        {...props}
+
         value={value}
         control={<Radio />}
         label={label}
-        {...refForward && { ref: refForward }}
         style={{ ...props.style, marginLeft: 0 }}
-        {...props}
       />
-    </>
   );
 };
 
