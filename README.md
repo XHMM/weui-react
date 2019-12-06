@@ -8,3 +8,9 @@ This is not a serious project, not a pure weui style, and I you'd better not use
     ```js
     import "@xhmm/weui-react/build/index.css"
     ```
+
+
+## development
+- `npm run dev` to start watch source code change
+- `npm run example` to debug components
+- `npm run build` to bundle

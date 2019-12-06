@@ -10,7 +10,9 @@
     "weui"
   ],
   "scripts": {
-    "build": "rimraf ./build && rollup -c && tsc"
+    "dev": "rollup -c --watch",
+    "build": "rimraf ./build && rollup -c && tsc",
+    "example": "parcel examples/index.html"
   },
   "files": [
     "build"
@@ -46,6 +48,7 @@
     "eslint": "6.6.0",
     "eslint-config-xhmm": "0.1.6",
     "fiber": "^1.0.4",
+    "parcel-bundler": "^1.12.4",
     "prettier": "1.19.1",
     "prettier-config-xhmm": "0.0.6",
     "rimraf": "^3.0.0",
