@@ -1,4 +1,3 @@
-import { TopTipsContext, TopTipsProvider } from './TopTips';
-import useTopTips from './useTopTips';
+import { TopTipsContext, TopTipsProvider, useTopTips } from './TopTips';
 
 export { TopTipsProvider, TopTipsContext, useTopTips };

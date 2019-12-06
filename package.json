@@ -1,6 +1,6 @@
 {
   "name": "@xhmm/weui-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "weui v2 for react, made mainly for personal use",
   "main": "./build/index.js",
   "module": "./build/index.js",
