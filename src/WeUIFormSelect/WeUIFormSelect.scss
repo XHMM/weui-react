@@ -1,5 +1,17 @@
-.weui-cells__group_form .weui-cell_select .weui-cell__bd:after {
-  right: 46px!important;
+.weui-cells_form  {
+  .weui-cell__bd {
+    position: relative;
+  }
 }
 
-/*TODO: 这个adornment样式。。。待细处理*/
+.weui-cells__group_form {
+  .weui-cell_select  {
+    .weui-cell__bd:after {
+      right: 0!important;
+    }
+  }
+
+  .weui-cell_select-after {
+    padding: 0 32px!important;
+  }
+}

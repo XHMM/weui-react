@@ -9,7 +9,7 @@ interface Props {
   adornment?: any;
 }
 const WeUIFormSelect: FC<Props> = ({label, options,onChange, adornment}) => {
-  return <div className="weui-cell weui-cell_select weui-cell_select-after">
+  return <div className="weui-cell weui-cell_select weui-cell_select-after" style={adornment ? {padding: '0 32px'} : {}}>
     <div className="weui-cell__hd">
       <label htmlFor="" className="weui-label">{label}</label>
     </div>

@@ -4,7 +4,8 @@ import {
   WeUIForm,
   WeUIFormRadio,
   WeUIFormRadioGroup,
-  useTopTips
+  useTopTips,
+  WeUIFormSelect
 } from "../build";
 
 const Page = function() {
@@ -23,6 +24,13 @@ const Page = function() {
           <WeUIFormRadio label="男" value="male" />
           <WeUIFormRadio label="女" value="female" />
         </WeUIFormRadioGroup>
+
+        <WeUIFormSelect
+          label="停放时间"
+          options={new Array(12).fill(0).map((_, idx) => ({ label: `${idx + 1}`, value: `${idx + 1}` }))}
+          onChange={() => {}}
+          adornment="个月"
+        />
       </WeUIForm>
       <WeUIButton value="确定修改" />
     </div>

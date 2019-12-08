@@ -1,6 +1,6 @@
 {
   "name": "@xhmm/weui-react",
-  "version": "0.0.3",
+  "version": "0.0.4-alpha.1",
   "description": "weui v2 for react, made mainly for personal use",
   "main": "./build/index.js",
   "module": "./build/index.js",
@@ -10,7 +10,7 @@
     "weui"
   ],
   "scripts": {
-    "dev": "rollup -c --watch",
+    "watch": "rollup -c --watch",
     "build": "rimraf ./build && rollup -c && tsc",
     "example": "parcel examples/index.html"
   },

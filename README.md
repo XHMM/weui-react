@@ -14,6 +14,6 @@ This is not a serious project, not use only weui styles, and I you'd better not 
     ``` 
 
 ## development
-- `npm run dev` to start watch source code change
+- `npm run watch` to start watch source code change
 - `npm run example` to debug components
 - `npm run build` to bundle
