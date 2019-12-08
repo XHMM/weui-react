@@ -3,6 +3,7 @@ import Page from './Page';
 import {
  TopTipsProvider
 } from "../build";
+import './weui.min.css';
 import "../build/index.css";
 
 interface Props {}

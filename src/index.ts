@@ -1,5 +1,3 @@
-import './weui.min.css'
-
 export * from './useTopTips';
 export * from './WeUIButton';
 export * from './WeUIDialog';
