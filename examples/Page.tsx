@@ -20,9 +20,9 @@ const Page = function() {
   return (
     <div>
       <WeUIForm>
-        <WeUIFormRadioGroup title="性别" onChange={onSexChange} value={sex}>
-          <WeUIFormRadio label="男" value="male" />
-          <WeUIFormRadio label="女" value="female" />
+        <WeUIFormRadioGroup title="性别设置" onChange={onSexChange} value={sex}>
+          <WeUIFormRadio label="我是男的" value="male" />
+          <WeUIFormRadio label="我是女的" value="female" />
         </WeUIFormRadioGroup>
 
         <WeUIFormSelect

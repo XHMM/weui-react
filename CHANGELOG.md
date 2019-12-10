@@ -8,3 +8,4 @@
 
 ## 0.0.4(unreleased)
 1. `WeUIFormSelect` adornment style adjusted
+2. you need to manually install `@material-ui/core` and `@material-ui/icons`

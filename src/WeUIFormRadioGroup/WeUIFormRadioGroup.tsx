@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import { RadioGroup } from '@material-ui/core';
-import { RadioGroupProps } from '@material-ui/core/RadioGroup';
+import { RadioGroup, RadioGroupProps } from '@material-ui/core';
 
 interface Props extends RadioGroupProps {
   title:string

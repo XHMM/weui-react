@@ -1,6 +1,5 @@
 import React, { FC, forwardRef } from "react";
-import { FormControlLabel, Radio } from "@material-ui/core";
-import { FormControlLabelProps } from "@material-ui/core/FormControlLabel";
+import { FormControlLabel, Radio, FormControlLabelProps } from "@material-ui/core";
 
 interface Props extends Omit<FormControlLabelProps, "control"> {
   label: string;

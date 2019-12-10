@@ -13,7 +13,7 @@ export default {
     format: 'es',
     file: pkg.module
   }],
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', '@material-ui/core', '@material-ui/icons'],
   plugins: [
 
     resolve({

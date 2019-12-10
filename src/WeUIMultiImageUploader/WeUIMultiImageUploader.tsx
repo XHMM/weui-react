@@ -1,25 +1,32 @@
-import React, { FC, useState, ChangeEventHandler } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import "./WeUIMultiImageUploader.scss"
+import React, { FC, useState, ChangeEventHandler } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import "./WeUIMultiImageUploader.scss";
 
 const useStyles = makeStyles({
   wrapper: {
     display: "flex",
-flexDirection: "column",
-alignItems: "center",
+    flexDirection: "column",
+    alignItems: "center"
   },
   description: {
-    fontSize: '0.9rem',
-    color: 'gray'
+    fontSize: "0.9rem",
+    color: "gray"
+  },
+  imagesWrapper: {
+    
   }
-})
+});
 
 interface Props {
   onChange: (file: File[]) => void;
-  title?:string
-  description?: string
+  title?: string;
+  description?: string;
 }
-const WeUIMultiImageUploader: FC<Props> = ({ onChange, description,title }) => {
+const WeUIMultiImageUploader: FC<Props> = ({
+  onChange,
+  description,
+  title
+}) => {
   const [fileDataURLs, setFileDataURLs] = useState<string[]>([]);
   const classes = useStyles();
   // mdn与文件处理有关的一篇十分全面的文章：https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
@@ -34,34 +41,39 @@ const WeUIMultiImageUploader: FC<Props> = ({ onChange, description,title }) => {
       files.map(f => {
         const url = URL.createObjectURL(f);
         urls.push(url);
-      })
-      
+      });
+
       onChange(files);
       setFileDataURLs(urls);
       setTimeout(() => {
         urls.map(f => {
-        URL.revokeObjectURL(f);
-        })
+          URL.revokeObjectURL(f);
+        });
       }, 1000);
-      
     } else onChange([]);
   };
 
   return (
     <div className={classes.wrapper}>
       <div>{title}</div>
-      <div>
-        {
-          fileDataURLs.map(u => {
-            return (<div
-                key={u}
-                className={ "weui-uploader__file"}
-                style={{ backgroundImage: `url(${u})`}}
-              />)
-          })
-        }
+      <div className={classes.imagesWrapper}>
+        {fileDataURLs.map(u => {
+          return (
+            <div
+              key={u}
+              className={"weui-uploader__file"}
+              style={{ backgroundImage: `url(${u})` }}
+            />
+          );
+        })}
         <div className="weui-uploader__input-box">
-          <input className="weui-uploader__input" type="file" multiple accept="image/*"  onChange={onFilesChange} />
+          <input
+            className="weui-uploader__input"
+            type="file"
+            multiple
+            accept="image/*"
+            onChange={onFilesChange}
+          />
         </div>
       </div>
 
