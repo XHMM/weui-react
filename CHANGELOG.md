@@ -6,6 +6,6 @@
 1. excluded weui css in order to let user to handle it
 
 
-## 0.0.4(unreleased)
+## 0.0.4
 1. `WeUIFormSelect` adornment style adjusted
 2. you need to manually install `@material-ui/core` and `@material-ui/icons`
