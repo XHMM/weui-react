@@ -9,3 +9,6 @@
 ## 0.0.4
 1. `WeUIFormSelect` adornment style adjusted
 2. you need to manually install `@material-ui/core` and `@material-ui/icons`
+
+## 0.0.5(unreleased)
+1. fix `showTopTips` configure not restore to default

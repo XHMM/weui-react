@@ -31,8 +31,8 @@ const TopTipsProvider: FC<{}> = ({ children }) => {
 
   const showTopTips: State["showTopTips"] = (content, newConfig) => {
     const finalConfig = {
-      duration: newConfig?.duration ?? config.duration,
-      type: newConfig?.type ?? config.type
+      duration: newConfig?.duration ?? defaultConfig.duration,
+      type: newConfig?.type ?? defaultConfig.type
     };
     clearTimeout(timer.current);
 

@@ -13,9 +13,13 @@ const Page = function() {
   const showTopTips = useTopTips();
   function onSexChange(ev: any): void {
     showTopTips('性别切换成功', {
-      type: 'warn'
+      type: 'primary'
     })
     setSex(ev.target.value);
+  }
+  
+  function submit(): void {
+    showTopTips('提交失败')
   }
   return (
     <div>
@@ -32,7 +36,7 @@ const Page = function() {
           adornment="个月"
         />
       </WeUIForm>
-      <WeUIButton value="确定修改" />
+      <WeUIButton value="确定修改" onClick={submit} />
     </div>
   );
 };
