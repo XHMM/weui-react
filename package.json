@@ -1,6 +1,6 @@
 {
   "name": "@xhmm/weui-react",
-  "version": "0.0.4",
+  "version": "0.0.5-alpha.1",
   "description": "weui v2 for react, made mainly for personal use",
   "main": "./build/index.js",
   "module": "./build/index.js",
@@ -20,7 +20,7 @@
   "private": false,
   "author": "xhmm",
   "license": "MIT",
-  "repository": "https://github.com/XHMM/typescript-react-starter",
+  "repository": "https://github.com/XHMM/weui-react",
   "dependencies": {
     "classnames": "^2.2.6"
   },
