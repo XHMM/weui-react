@@ -33,6 +33,7 @@ const Page = function() {
           label="停放时间"
           options={new Array(12).fill(0).map((_, idx) => ({ label: `${idx + 1}`, value: `${idx + 1}` }))}
           onChange={() => {}}
+          value={3+""}
           adornment="个月"
         />
       </WeUIForm>

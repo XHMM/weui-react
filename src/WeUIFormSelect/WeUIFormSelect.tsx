@@ -4,17 +4,18 @@ import "./WeUIFormSelect.scss"
 type Option = {label: string, value: string}
 interface Props {
   label: string
+  value?: string
   options: Array<Option>
   onChange: ChangeEventHandler
   adornment?: any;
 }
-const WeUIFormSelect: FC<Props> = ({label, options,onChange, adornment}) => {
+const WeUIFormSelect: FC<Props> = ({label, options,onChange, adornment, value}) => {
   return <div className="weui-cell weui-cell_select weui-cell_select-after" style={adornment ? {padding: '0 32px'} : {}}>
     <div className="weui-cell__hd">
       <label htmlFor="" className="weui-label">{label}</label>
     </div>
     <div className="weui-cell__bd">
-      <select onChange={onChange} className="weui-select">
+      <select onChange={onChange} className="weui-select" {...value ? {value}: {}}>
         {
           options.map(o => {
             return <option value={o.value} key={o.value}>{o.label}</option>
