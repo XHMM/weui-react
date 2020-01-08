@@ -13,3 +13,4 @@
 ## 0.0.5(unreleased)
 1. fix `showTopTips` configure not restore to default
 2. fix `WeUIFormSelect ` not support `value` prop
+3. **(breaking)** `WeUIDialog` use `children` instead of `content`
