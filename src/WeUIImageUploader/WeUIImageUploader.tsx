@@ -1,25 +1,25 @@
-import React, { FC, useState, ChangeEventHandler } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import "./WeUIImageUploader.scss"
+import React, { FC, useState, ChangeEventHandler } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import "./WeUIImageUploader.scss";
 
 const useStyles = makeStyles({
   wrapper: {
     display: "flex",
-flexDirection: "column",
-alignItems: "center",
+    flexDirection: "column",
+    alignItems: "center"
   },
   description: {
-    fontSize: '0.9rem',
-    color: 'gray'
+    fontSize: "0.9rem",
+    color: "gray"
   }
-})
+});
 
 interface Props {
   onChange: (file: File | null) => void;
-  title?:string
-  description?: string
+  title?: string;
+  description?: string;
 }
-const WeUIImageUploader: FC<Props> = ({ onChange, description,title }) => {
+const WeUIImageUploader: FC<Props> = ({ onChange, description, title }) => {
   const [fileDataURL, setFileDataURL] = useState();
   const classes = useStyles();
   // mdn与文件处理有关的一篇十分全面的文章：https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
@@ -43,10 +43,24 @@ const WeUIImageUploader: FC<Props> = ({ onChange, description,title }) => {
     <div className={classes.wrapper}>
       <div>{title}</div>
       <div
-        className={fileDataURL ? "weui-uploader__file" : "weui-uploader__input-box"}
-        style={fileDataURL ? { backgroundImage: `url(${fileDataURL})`, backgroundSize: 'cover' } : {}}
+        className={
+          fileDataURL ? "weui-uploader__file" : "weui-uploader__input-box"
+        }
+        style={
+          fileDataURL
+            ? {
+                backgroundImage: `url(${fileDataURL})`,
+                backgroundSize: "cover"
+              }
+            : {}
+        }
       >
-        <input className="weui-uploader__input" type="file" accept="image/*" onChange={onFileChange} />
+        <input
+          className="weui-uploader__input"
+          type="file"
+          accept="image/*"
+          onChange={onFileChange}
+        />
       </div>
       <div className={classes.description}>{description}</div>
     </div>

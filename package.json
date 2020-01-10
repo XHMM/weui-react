@@ -13,7 +13,8 @@
     "watch": "rollup -c --watch",
     "build": "rimraf ./build && rollup -c && tsc",
     "example": "parcel examples/index.html",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint ./src --ext .ts --ext .tsx --ignore-path ./.gitignore --ignore-path ./.eslintignore --fix-dry-run"
   },
   "files": [
     "build"
@@ -28,36 +29,36 @@
   "peerDependencies": {
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "@material-ui/core": "^4.6.1",
+    "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1"
   },
   "devDependencies": {
-    "@babel/core": "7.7.2",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
-    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
-    "@babel/preset-env": "7.7.1",
-    "@babel/preset-react": "7.7.0",
-    "@babel/preset-typescript": "7.7.2",
+    "@babel/core": "7.7.7",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/preset-env": "7.7.7",
+    "@babel/preset-react": "7.7.4",
+    "@babel/preset-typescript": "7.7.7",
     "@types/classnames": "^2.2.9",
-    "@types/react": "16.9.11",
+    "@types/react": "16.9.17",
     "@types/react-dom": "16.9.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cross-env": "6.0.3",
-    "eslint": "6.6.0",
-    "eslint-config-xhmm": "0.1.6",
+    "eslint": "6.8.0",
+    "eslint-config-xhmm": "0.1.7",
     "fiber": "^1.0.4",
     "parcel-bundler": "^1.12.4",
     "prettier": "1.19.1",
     "prettier-config-xhmm": "0.0.6",
     "rimraf": "^3.0.0",
-    "rollup": "^1.27.8",
+    "rollup": "^1.29.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-multi-entry": "^2.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-scss": "^1.0.2",
-    "sass": "^1.23.6",
-    "typescript": "3.7.2"
+    "rollup-plugin-scss": "^2.1.0",
+    "sass": "^1.24.4",
+    "typescript": "3.7.4"
   }
 }

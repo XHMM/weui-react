@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
-import { Fade } from '@material-ui/core';
+import React, { FC } from "react";
+import { Fade } from "@material-ui/core";
 
 /*
-* 提示：
-* 使用时请将该组件放在最末尾，否则可能出现当dialog显示该组件后面的元素会过一阵才至于遮罩下方
-* 
-* */
+ * 提示：
+ * 使用时请将该组件放在最末尾，否则可能出现当dialog显示该组件后面的元素会过一阵才至于遮罩下方
+ *
+ * */
 
 interface Props {
   show: boolean;
@@ -21,10 +21,14 @@ const WeUIDialog: FC<Props> = ({
   show,
   title,
   children,
-  leftText = '',
-  onLeftClick = () => {},
-  rightText = '确定',
-  onRightClick = () => {},
+  leftText = "",
+  onLeftClick = () => {
+    return;
+  },
+  rightText = "确定",
+  onRightClick = () => {
+    return;
+  }
 }) => {
   return (
     <Fade in={show}>
@@ -36,10 +40,16 @@ const WeUIDialog: FC<Props> = ({
           </div>
           <div className="weui-dialog__bd">{children}</div>
           <div className="weui-dialog__ft">
-            <a className="weui-dialog__btn weui-dialog__btn_default" onClick={onLeftClick}>
+            <a
+              className="weui-dialog__btn weui-dialog__btn_default"
+              onClick={onLeftClick}
+            >
               {leftText}
             </a>
-            <a className="weui-dialog__btn weui-dialog__btn_primary" onClick={onRightClick}>
+            <a
+              className="weui-dialog__btn weui-dialog__btn_primary"
+              onClick={onRightClick}
+            >
               {rightText}
             </a>
           </div>

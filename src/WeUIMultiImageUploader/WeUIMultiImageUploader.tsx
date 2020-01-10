@@ -12,9 +12,7 @@ const useStyles = makeStyles({
     fontSize: "0.9rem",
     color: "gray"
   },
-  imagesWrapper: {
-    
-  }
+  imagesWrapper: {}
 });
 
 interface Props {
