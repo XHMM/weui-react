@@ -1,0 +1,44 @@
+---
+name: WeUIFormRadio
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import "../../build/index.css"
+import { WeUIForm, WeUIFormRadio, WeUIFormRadioGroup } from '../../build'
+
+`WeUIFormRadioGroup`
+
+|props|type|required|
+|---|---|---|
+|title|string|true|
+|onChange|`(event: React.ChangeEvent<HTMLInputElement>, value: string) => void` ||
+|value|string||
+
+`WeUIFormRadio`
+
+|props|type|required|
+|---|---|---|
+|label|string|true|
+|value|string|true|
+
+<Playground>
+    {
+      () => {
+        const [sex, setSex] = React.useState("male");
+        
+        function onSexChange(ev) {
+          setSex(ev.target.value);
+        }
+        
+        return (
+          <WeUIForm>
+            <WeUIFormRadioGroup title="sex change" onChange={onSexChange} value={sex}>
+              <WeUIFormRadio label="male" value="male" />
+              <WeUIFormRadio label="female" value="female" />
+            </WeUIFormRadioGroup>
+          </WeUIForm>
+        )
+      }  
+    }
+</Playground>

@@ -1,6 +1,6 @@
 import React, { FC, useState, ChangeEventHandler } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import "./WeUIImageUploader.scss";
+import "./WeUIImageUploader.css";
 
 const useStyles = makeStyles({
   wrapper: {
@@ -20,7 +20,7 @@ interface Props {
   description?: string;
 }
 const WeUIImageUploader: FC<Props> = ({ onChange, description, title }) => {
-  const [fileDataURL, setFileDataURL] = useState();
+  const [fileDataURL, setFileDataURL] = useState<string>();
   const classes = useStyles();
   // mdn与文件处理有关的一篇十分全面的文章：https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
   // 个人补充：首次点击file input不选内容不会触发onchange，选了内容后再点击但不选文件直接关闭，会触发onchange

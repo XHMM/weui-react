@@ -1,12 +1,12 @@
 import React, { FC, ChangeEventHandler } from 'react';
-import "./WeUIFormSelect.scss"
+import "./WeUIFormSelect.css"
 
 type Option = {label: string, value: string}
 interface Props {
   label: string
-  value?: string
   options: Array<Option>
   onChange: ChangeEventHandler
+  value?: string
   adornment?: any;
 }
 const WeUIFormSelect: FC<Props> = ({label, options,onChange, adornment, value}) => {
@@ -23,7 +23,7 @@ const WeUIFormSelect: FC<Props> = ({label, options,onChange, adornment, value}) 
         }
       </select>
     </div>
-    {adornment!==undefined && <div className="weui-cell__ft" style={{fontSize: '1rem'}}>{adornment}</div>}
+    {adornment!==undefined && <div className="weui-cell__ft">{adornment}</div>}
   </div>;
 };
 

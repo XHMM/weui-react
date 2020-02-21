@@ -1,0 +1,42 @@
+---
+name: useTopTips
+menu: Hooks
+---
+
+import { Playground, Props } from 'docz'
+import "../../build/index.css"
+import { TopTipsProvider, useTopTips } from '../../build'
+
+`showTopTips(content, config?)`
+
+|params|type|required|default|
+|:---:|:---:|:---:|:---:|
+|content|string|true||
+|config| { type: 'warn' &#124; 'primary', duration: number } | { type: 'warn', duration: 2000 }|
+
+
+<Playground>
+{
+  () => {
+    const App = function({children}) {
+      return <TopTipsProvider><Cmp /></TopTipsProvider>
+    }
+    
+    const style = {
+        padding: '7px 3px',
+        display: 'block',
+        margin: '10px'
+    }
+    const Cmp = function() {
+        const showTopTips = useTopTips();
+        return (<>
+            <button onClick={() => {showTopTips("content")}} style={style}>Click me to show warning top-tips</button>
+            <button onClick={() => {showTopTips("content", { type: 'primary', duration: 5000})}} style={style}>Click me to show primary top-tips</button>        
+        </>)
+    }
+    
+    return <App />
+  }
+}
+
+</Playground>

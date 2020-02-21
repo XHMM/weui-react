@@ -1,0 +1,9 @@
+.weui-btn_big {
+  width: 100%;
+  border: none;
+}
+
+.weui-btn_big:focus,
+.weui-btn_big:active {
+  outline: none;
+}

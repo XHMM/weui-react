@@ -1,6 +1,6 @@
 import React, { createContext, FC, useState, useRef, useContext } from "react";
 import { Fade } from "@material-ui/core";
-import "./TopTips.scss";
+import "./TopTips.css";
 
 interface Config {
   duration?: number;

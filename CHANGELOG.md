@@ -1,3 +1,6 @@
+## 0.1.0 (2020-02-21)
+1. add documentation
+
 ## 0.0.6 (2020-01-10)
 1. fix `showTopTips` configure not restore to default
 2. fix `WeUIFormSelect ` not support `value` prop

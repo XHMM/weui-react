@@ -1,10 +1,11 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import scss from 'rollup-plugin-scss'
+import commonjs from '@rollup/plugin-commonjs';
+import css from 'rollup-plugin-css-only'
 // import external from 'rollup-plugin-peer-deps-external'
 import pkg from './package.json'
-// import multiEntry from "rollup-plugin-multi-entry";
+
+// TODO: 在webpack里使用该build的文件，查看bundle analyzer感觉包体积有点大啊，需要后面分析研究下 
 
 export default {
   // input: 'src/**/index.ts',
@@ -13,9 +14,8 @@ export default {
     format: 'es',
     file: pkg.module
   }],
-  external: ['react', 'react-dom', '@material-ui/core', '@material-ui/icons'],
+  external: ['react', 'react-dom'],
   plugins: [
-
     resolve({
       extensions: [
         '.js', '.jsx', '.ts', '.tsx',
@@ -53,11 +53,12 @@ export default {
           'isElement',
           'isValidElementType',
           'ForwardRef'
+        ],
+        'node_modules/prop-types/index.js': [
+          'elementType'
         ]
       }
     }),
-
-    scss(),
-    // multiEntry()
+    css()
   ]
 };

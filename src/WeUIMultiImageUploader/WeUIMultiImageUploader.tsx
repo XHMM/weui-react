@@ -1,6 +1,6 @@
 import React, { FC, useState, ChangeEventHandler } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import "./WeUIMultiImageUploader.scss";
+import "./WeUIMultiImageUploader.css";
 
 const useStyles = makeStyles({
   wrapper: {

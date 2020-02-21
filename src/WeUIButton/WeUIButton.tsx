@@ -1,16 +1,15 @@
 import React, { FC, MouseEventHandler } from "react";
 import classnames from "classnames";
-import "./WeUIButton.scss";
+import "./WeUIButton.css";
 
 interface Props {
-  value: string;
   onClick?: MouseEventHandler;
   size?: "small" | "middle" | "big";
   loading?: boolean;
   disabled?: boolean;
 }
 const WeUIButton: FC<Props> = ({
-  value,
+  children,
   onClick = () => {
     return;
   },
@@ -34,7 +33,7 @@ const WeUIButton: FC<Props> = ({
       disabled={loading || disabled}
     >
       {loading ? <i className="weui-loading" /> : ""}
-      {value}
+      {children}
     </button>
   );
 };

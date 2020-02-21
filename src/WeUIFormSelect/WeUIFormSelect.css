@@ -1,0 +1,15 @@
+.weui-cells_form .weui-cell_select-after {
+  padding: 0 32px;
+}
+
+.weui-cells_form .weui-cell_select .weui-cell__bd:after {
+  right: 0;
+}
+
+.weui-cells_form .weui-cell_select .weui-cell__bd {
+  position: relative;
+}
+
+.weui-cells_form .weui-cell_select .weui-cell__ft {
+  font-size: 1rem;
+}

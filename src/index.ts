@@ -1,3 +1,5 @@
+import "./weui.css";
+
 export * from './useTopTips';
 export * from './WeUIButton';
 export * from './WeUIDialog';

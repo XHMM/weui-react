@@ -1,0 +1,37 @@
+---
+name: WeUIFormSelect
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import "../../build/index.css"
+import { WeUIForm, WeUIFormSelect } from '../../build'
+
+
+|props|type|required|
+|---|---|---|
+|label|string|true|
+|options|Array<{label:string, value: string}>|true|
+|onChange|ChangeEventHandler|true|
+|value|string| |
+|adornment|any| |
+
+
+
+<Playground>
+    {
+      () => {
+        return (
+          <WeUIForm>
+            <WeUIFormSelect
+                      label="time"
+                      options={new Array(12).fill(0).map((_, idx) => ({ label: `${idx + 1}`, value: `${idx + 1}` }))}
+                      onChange={() => {}}
+                      value={3+""}
+                      adornment="month(s)"
+            />
+          </WeUIForm>
+        )
+      }  
+    }
+</Playground>

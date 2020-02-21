@@ -1,5 +1,5 @@
 import React, { FC, CSSProperties } from 'react';
-import "./WeUIForm.scss";
+import "./WeUIForm.css";
 
 interface Props {
   title?: string;
