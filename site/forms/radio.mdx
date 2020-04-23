@@ -4,24 +4,21 @@ menu: Components
 ---
 
 import { Playground, Props } from 'docz'
-import "../../build/index.css"
 import { WeUIForm, WeUIFormRadio, WeUIFormRadioGroup } from '../../build'
+import "../../build/index.css"
 
-`WeUIFormRadioGroup`
 
-|props|type|required|
-|---|---|---|
-|title|string|true|
-|onChange|`(event: React.ChangeEvent<HTMLInputElement>, value: string) => void` ||
-|value|string||
+**warning :** radio component not follow original style
 
-`WeUIFormRadio`
+## Props
 
-|props|type|required|
-|---|---|---|
-|label|string|true|
-|value|string|true|
+### `WeUIFormRadioGroup`
+<Props of={WeUIFormRadioGroup} />
 
+### `WeUIFormRadio`
+<Props of={WeUIFormRadio} />
+
+## Usage
 <Playground>
     {
       () => {

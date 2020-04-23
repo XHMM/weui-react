@@ -2,14 +2,15 @@ import React, { FC, forwardRef } from "react";
 import {
   FormControlLabel,
   Radio,
-  FormControlLabelProps
+  /*FormControlLabelProps*/
 } from "@material-ui/core";
 
-interface Props extends Omit<FormControlLabelProps, "control"> {
+interface Props/* extends Omit<FormControlLabelProps, "control">*/ {
   label: string;
   value: string;
 }
-const WeUIFormRadio: FC<Props> = forwardRef(
+
+const WeUIFormRadio: FC<Props> = forwardRef<any, Props>(
   ({ label, value, ...props }, ref) => {
     return (
       <FormControlLabel

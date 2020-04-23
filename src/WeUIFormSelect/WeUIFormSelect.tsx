@@ -1,11 +1,10 @@
 import React, { FC, ChangeEventHandler } from 'react';
 import "./WeUIFormSelect.css"
 
-type Option = {label: string, value: string}
 interface Props {
   label: string
-  options: Array<Option>
-  onChange: ChangeEventHandler
+  options: Array<{label: string, value: string}>
+  onChange: ChangeEventHandler<HTMLSelectElement>
   value?: string
   adornment?: any;
 }

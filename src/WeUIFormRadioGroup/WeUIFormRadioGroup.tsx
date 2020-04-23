@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
-import { RadioGroup, RadioGroupProps } from '@material-ui/core';
+import { RadioGroup, /*RadioGroupProps*/ } from '@material-ui/core';
 
-interface Props extends RadioGroupProps {
-  title:string
+interface Props/* extends RadioGroupProps*/ {
+  title: string
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>, value: string) => void
+  value?: string
 }
-const WeUIFormRadioGroup: FC<Props> = ({title,children, ...props}) => {
+const WeUIFormRadioGroup: FC<Props> = ({title = '',children, ...props}) => {
   return <>
     <div className="weui-cell">
       <div className="weui-cell__hd">

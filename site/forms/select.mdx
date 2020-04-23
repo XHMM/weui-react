@@ -4,20 +4,13 @@ menu: Components
 ---
 
 import { Playground, Props } from 'docz'
-import "../../build/index.css"
 import { WeUIForm, WeUIFormSelect } from '../../build'
+import "../../build/index.css"
 
+## Props
+<Props of={WeUIFormSelect}/>
 
-|props|type|required|
-|---|---|---|
-|label|string|true|
-|options|Array<{label:string, value: string}>|true|
-|onChange|ChangeEventHandler|true|
-|value|string| |
-|adornment|any| |
-
-
-
+## Usage
 <Playground>
     {
       () => {
