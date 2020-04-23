@@ -52,7 +52,8 @@ export default {
         'node_modules/react-is/index.js': [
           'isElement',
           'isValidElementType',
-          'ForwardRef'
+          'ForwardRef',
+          'Memo'
         ],
         'node_modules/prop-types/index.js': [
           'elementType'
