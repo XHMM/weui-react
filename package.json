@@ -1,6 +1,6 @@
 {
   "name": "@xhmm/weui-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "weui for react, made mainly for personal use",
   "main": "./build/index.js",
   "module": "./build/index.js",
@@ -13,7 +13,7 @@
     "lib:watch": "rollup -c --watch",
     "lib:build": "rimraf ./build && rollup -c && tsc",
     "lib:eslint": "eslint ./src --ext .ts --ext .tsx --ignore-path ./.gitignore --ignore-path ./.eslintignore --fix-dry-run",
-    "prepublishOnly": "npm run lib:build",
+    "prepublishOnly": "npm run lib:build && npm run docz:build",
     "docz:dev": "docz dev",
     "docz:build": "docz build"
   },

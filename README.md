@@ -1,5 +1,7 @@
 <h1 align="center">@xhmm/weui-react</h1>
 
+**warning:** this project is still in development
+
 ## Doc
 see in [documentation](https://xhmm.github.io/weui-react/)  
 
@@ -10,4 +12,4 @@ see in [documentation](https://xhmm.github.io/weui-react/)
 ## Development
 - `npm run watch` to start watch source code change
 - `npm run build` to bundle
-- `npm run example` to debug components
+- `npm run example` to try components

@@ -1,8 +1,8 @@
-.custom__weui-btn_cell {
+.override__weui-btn_cell {
   width: 100%;
   border: none;
 } 
 
-.custom__weui-btn_cell:focus,.custom__weui-btn_cell:active {
+.override__weui-btn_cell:focus,.override__weui-btn_cell:active {
   outline: none;
 }

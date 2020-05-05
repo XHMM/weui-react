@@ -31,7 +31,7 @@ const WeUIButton: FC<Props> = ({
     'weui-btn_cell': size ==='cell',
     
     [`weui-btn_${type}`]: size !== 'cell',
-    [`weui-btn_cell-${type} custom__weui-btn_cell`]: size === 'cell',
+    [`weui-btn_cell-${type} override__weui-btn_cell`]: size === 'cell',
     "weui-btn_disabled": disabled,
     "weui-btn_loading": loading
   });

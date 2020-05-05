@@ -1,3 +1,7 @@
+## 0.2.0 (2020-05-05)
+1. **(breaking)** `WeUIButton` now fully follow original weui style, see document for details
+2. documents better than before
+
 ## 0.1.0 (2020-02-21)
 1. add documentation
 

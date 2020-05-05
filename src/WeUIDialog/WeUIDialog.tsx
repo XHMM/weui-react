@@ -1,12 +1,6 @@
 import React, { FC } from "react";
 import { Fade } from "@material-ui/core";
 
-/*
- * 提示：
- * 使用时请将该组件放在最末尾，否则可能出现当dialog显示该组件后面的元素会过一阵才至于遮罩下方
- *
- * */
-
 interface Props {
   show: boolean;
   title: string;

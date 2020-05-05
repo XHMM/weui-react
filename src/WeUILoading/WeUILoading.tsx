@@ -4,7 +4,7 @@ interface Props {
   show: boolean;
   content?: string;
 }
-const WeUILoading: FC<Props> = ({ show, content = '加载中' }) => {
+const WeUILoading: FC<Props> = ({ show, content = 'loading...' }) => {
   return (
     <>
       <div id="loadingToast" style={{ display: show ? 'block' : 'none' }}>
