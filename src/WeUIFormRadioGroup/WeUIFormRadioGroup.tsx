@@ -1,21 +1,31 @@
-import React, { FC } from 'react';
-import { RadioGroup, /*RadioGroupProps*/ } from '@material-ui/core';
+import React, { FC, useState } from 'react';
+import { WeUIFormRadio } from '../WeUIFormRadio';
 
 interface Props/* extends RadioGroupProps*/ {
   title: string
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>, value: string) => void
+  name: string
+  data: Array<{label:string, value:string}>
+  onChange?: (value: string) => void
   value?: string
 }
-const WeUIFormRadioGroup: FC<Props> = ({title = '',children, ...props}) => {
+const WeUIFormRadioGroup: FC<Props> = ({title = '',value, name,data, onChange}) => {
+  const [radioValue, setRadioValue] = useState(value)
+  const onRadioChange = (ev:any) => {
+    const val = ev.target.value
+    setRadioValue(val)
+    onChange && onChange(val)
+  }
   return <>
     <div className="weui-cell">
       <div className="weui-cell__hd">
         <label className="weui-label">{title}</label>
       </div>
-      <div className="weui-cell__bd">
-        <RadioGroup {...props}>
-          {children}
-        </RadioGroup>
+      <div className="weui-cell__bd" onChange={onRadioChange}>
+        <div className="weui-cells_radio">
+          {
+            data.map(d => <WeUIFormRadio key={d.value} label={d.label} value={d.value} name={name} checked={radioValue === d.value} />)
+          }
+        </div>
       </div>
     </div>
     

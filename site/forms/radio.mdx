@@ -1,22 +1,18 @@
 ---
-name: WeUIFormRadio
+name: WeUIFormRadioGroup
 menu: Components
 ---
 
 import { Playground, Props } from 'docz'
-import { WeUIForm, WeUIFormRadio, WeUIFormRadioGroup } from '../../build'
+import { WeUIForm, WeUIFormRadioGroup } from '../../build'
 import "../../build/index.css"
 
 
-**warning :** radio component not follow original style
+### `Notes`
+difference between this component and official radio weui styles is : as example below, this component show title on left but official not has this. 
 
-## Props
-
-### `WeUIFormRadioGroup`
+### `Props`
 <Props of={WeUIFormRadioGroup} />
-
-### `WeUIFormRadio`
-<Props of={WeUIFormRadio} />
 
 ## Usage
 <Playground>
@@ -24,16 +20,18 @@ import "../../build/index.css"
       () => {
         const [sex, setSex] = React.useState("male");
         
-        function onSexChange(ev) {
-          setSex(ev.target.value);
+        function onSexChange(value) {
+          setSex(value);
         }
         
         return (
           <WeUIForm>
-            <WeUIFormRadioGroup title="sex change" onChange={onSexChange} value={sex}>
-              <WeUIFormRadio label="male" value="male" />
-              <WeUIFormRadio label="female" value="female" />
-            </WeUIFormRadioGroup>
+            <WeUIFormRadioGroup 
+                title="sex change" 
+                onChange={onSexChange} 
+                value={sex} 
+                data={ [{label: 'male', value:'male'}, {label: 'female', value: 'female'}] } 
+            />
           </WeUIForm>
         )
       }  

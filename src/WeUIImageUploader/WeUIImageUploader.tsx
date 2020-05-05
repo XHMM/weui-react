@@ -1,18 +1,17 @@
 import React, { FC, useState, ChangeEventHandler } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import "./WeUIImageUploader.css";
 
-const useStyles = makeStyles({
+const styles = {
   wrapper: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
-  },
+  } as const,
   description: {
     fontSize: "0.9rem",
     color: "gray"
   }
-});
+}
 
 interface Props {
   onChange: (file: File | null) => void;
@@ -21,7 +20,6 @@ interface Props {
 }
 const WeUIImageUploader: FC<Props> = ({ onChange, description, title }) => {
   const [fileDataURL, setFileDataURL] = useState<string>();
-  const classes = useStyles();
   // mdn与文件处理有关的一篇十分全面的文章：https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
   // 个人补充：首次点击file input不选内容不会触发onchange，选了内容后再点击但不选文件直接关闭，会触发onchange
   const onFileChange: ChangeEventHandler<HTMLInputElement> = (ev): void => {
@@ -40,7 +38,7 @@ const WeUIImageUploader: FC<Props> = ({ onChange, description, title }) => {
   };
 
   return (
-    <div className={classes.wrapper}>
+    <div style={styles.wrapper}>
       <div>{title}</div>
       <div
         className={
@@ -62,7 +60,7 @@ const WeUIImageUploader: FC<Props> = ({ onChange, description, title }) => {
           onChange={onFileChange}
         />
       </div>
-      <div className={classes.description}>{description}</div>
+      <div style={styles.description}>{description}</div>
     </div>
   );
 };

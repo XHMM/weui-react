@@ -5,7 +5,7 @@ export * from './WeUIButton';
 export * from './WeUIDialog';
 export * from './WeUIForm';
 export * from './WeUIFormCustomItem';
-export * from './WeUIFormRadio';
+// export * from './WeUIFormRadio';
 export * from './WeUIFormRadioGroup';
 export * from './WeUIFormSelect';
 export * from './WeUIFormTextInput';
