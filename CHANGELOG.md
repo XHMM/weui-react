@@ -1,3 +1,6 @@
+## 0.2.1 (2020-05-06)
+1. add support for commonjs
+
 ## 0.2.0 (2020-05-05)
 1. **(breaking)** `WeUIButton` now fully follow original weui style, see document for details
 2. documents better than before

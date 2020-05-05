@@ -1,8 +1,8 @@
 {
   "name": "@xhmm/weui-react",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "weui for react, made mainly for personal use",
-  "main": "./build/index.js",
+  "main": "./build/index.cjs.js",
   "module": "./build/index.js",
   "types": "./build/index.d.ts",
   "keywords": [

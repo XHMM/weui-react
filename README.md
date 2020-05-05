@@ -12,4 +12,3 @@ see in [documentation](https://xhmm.github.io/weui-react/)
 ## Development
 - `npm run watch` to start watch source code change
 - `npm run build` to bundle
-- `npm run example` to try components

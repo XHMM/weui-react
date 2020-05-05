@@ -13,6 +13,9 @@ export default {
   output: [{
     format: 'es',
     file: pkg.module
+  }, {
+    format: 'cjs',
+    file: pkg.main
   }],
   external: ['react', 'react-dom'],
   plugins: [
@@ -60,6 +63,8 @@ export default {
         ]
       }
     }),
-    css()
+    css({
+      output: './build/index.css'
+    })
   ]
 };
