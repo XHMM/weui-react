@@ -1,6 +1,6 @@
-## 0.3.0-alpha1
-1. **(breaking)** not expose `WeUIFormRadio` to public, use `WeUIFormRadioGroup` only now
-2. `WeUIFormRadioGroup` now follow original weui style, see document for result
+## 0.3.0 (2020-11-08)
+1. **(breaking)** not expose `WeUIFormRadio` to public, use `WeUIFormRadioGroup` instead
+1. website style changed (not use docz anymore)
 
 ## 0.2.1 (2020-05-06)
 1. add support for commonjs

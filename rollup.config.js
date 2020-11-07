@@ -1,11 +1,9 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
-import css from 'rollup-plugin-css-only'
-// import external from 'rollup-plugin-peer-deps-external'
+import postcss from 'rollup-plugin-postcss'
+import clear from 'rollup-plugin-clear'
 import pkg from './package.json'
-
-// TODO: 在webpack里使用该build的文件，查看bundle analyzer感觉包体积有点大啊，需要后面分析研究下 
 
 export default {
   // input: 'src/**/index.ts',
@@ -24,47 +22,52 @@ export default {
         '.js', '.jsx', '.ts', '.tsx',
       ]
     }),
+    postcss({
+      autoModules: true,
+      extract: 'index.css'
+    }),
     babel({
       extensions: [
         '.js', '.jsx', '.ts', '.tsx',
       ],
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
+      presets: [
+        ["@babel/env", {
+          "modules": false
+        }],
+        "@babel/typescript",
+        "@babel/react"
+      ],
+      plugins: [
+        "@babel/plugin-proposal-nullish-coalescing-operator",
+        "@babel/plugin-proposal-optional-chaining",
+        "transform-class-properties",
+        [
+          "babel-plugin-import",
+          {
+            "libraryName": "@material-ui/core",
+            "libraryDirectory": "esm",
+            "camel2DashComponentName": false
+          },
+          "core"
+        ],
+        [
+          "babel-plugin-import",
+          {
+            "libraryName": "@material-ui/icons",
+            "libraryDirectory": "esm",
+            "camel2DashComponentName": false
+          },
+          "icons"
+        ]
+      ]
     }),
     commonjs({
-      include: 'node_modules/**',
-      namedExports: {
-        'node_modules/react/index.js': [
-          'Children',
-          'Component',
-          'PureComponent',
-          'PropTypes',
-          'createElement',
-          'Fragment',
-          'cloneElement',
-          'StrictMode',
-          'createFactory',
-          'createRef',
-          'createContext',
-          'isValidElement',
-          'isValidElementType',
-        ],
-        'node_modules/react-dom/index.js': [
-          'render',
-          'hydrate',
-        ],
-        'node_modules/react-is/index.js': [
-          'isElement',
-          'isValidElementType',
-          'ForwardRef',
-          'Memo'
-        ],
-        'node_modules/prop-types/index.js': [
-          'elementType'
-        ]
-      }
+      include: 'node_modules/**'
     }),
-    css({
-      output: './build/index.css'
+    clear({
+      targets: ['build'],
+      
     })
   ]
 };

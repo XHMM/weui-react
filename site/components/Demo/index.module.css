@@ -1,0 +1,10 @@
+.container {
+  max-width: 455px;
+  margin: 1rem auto;
+  padding: 20px 0px;
+  background-color: var(--weui-BG-0);
+  display: block;
+  border: 1vh solid #111;
+  border-radius: 4vh;
+  min-height: 752px;
+}

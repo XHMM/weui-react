@@ -1,0 +1,29 @@
+{
+  "name": "doc",
+  "description": "weui for react",
+  "scripts": {
+    "doc:dev": "parcel ./index.html",
+    "doc:build": "parcel build ./index.html --no-source-maps --out-dir ../docs"
+  },
+  "author": "xhmm",
+  "license": "MIT",
+  "repository": "https://github.com/XHMM/weui-react",
+  "devDependencies": {
+    "@types/react-syntax-highlighter": "13.5.0",
+    "postcss-modules": "3.2.2",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-markdown": "5.0.2",
+    "react-syntax-highlighter": "15.3.0",
+    "remark-gfm": "1.0.0"
+  },
+  "alias": {
+    "react": "./node_modules/react",
+    "react-dom": "./node_modules/react-dom"
+  },
+  "dependencies": {
+    "@xhmm/weui-react": "0.3.0-alpha1",
+    "github-markdown-css": "4.0.0",
+    "parcel": "1.12.4"
+  }
+}

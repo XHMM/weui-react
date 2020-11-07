@@ -1,21 +1,21 @@
 {
   "name": "@xhmm/weui-react",
-  "version": "0.3.0-alpha1",
-  "description": "weui for react, made mainly for personal use",
+  "version": "0.3.0",
+  "description": "weui for react",
   "main": "./build/index.cjs.js",
-  "module": "./build/index.js",
+  "module": "./build/index.es.js",
   "types": "./build/index.d.ts",
   "keywords": [
     "react",
     "weui"
   ],
   "scripts": {
-    "lib:watch": "rollup -c --watch",
-    "lib:build": "rimraf ./build && rollup -c && tsc",
+    "lib:watch": "rollup -c --watch && npm run lib:type",
+    "lib:type": "tsc",
+    "lib:build": "rollup -c",
     "lib:eslint": "eslint ./src --ext .ts --ext .tsx --ignore-path ./.gitignore --ignore-path ./.eslintignore --fix-dry-run",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build",
-    "prepublishOnly": "npm run lib:build && npm run docz:build"
+    "doc:build": "cd site && npm run doc:build",
+    "prepublishOnly": "npm run lib:build && npm run lib:type && npm run doc:build"
   },
   "files": [
     "build"
@@ -25,36 +25,36 @@
   "license": "MIT",
   "repository": "https://github.com/XHMM/weui-react",
   "devDependencies": {
-    "@material-ui/core": "^4.9.13",
-    "classnames": "^2.2.6",
-    "@babel/core": "7.9.6",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
-    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
-    "@babel/preset-env": "7.9.6",
-    "@babel/preset-react": "7.9.4",
-    "@babel/preset-typescript": "7.9.0",
-    "@rollup/plugin-commonjs": "^11.1.0",
-    "@types/classnames": "^2.2.10",
-    "@types/react": "16.9.34",
-    "@types/react-dom": "16.9.7",
-    "babel-plugin-import": "^1.13.0",
+    "@babel/core": "7.12.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-react": "7.12.5",
+    "@babel/preset-typescript": "7.12.1",
+    "@material-ui/core": "^4.11.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@types/classnames": "^2.2.11",
+    "@types/react": "16.9.56",
+    "@types/react-dom": "16.9.9",
+    "babel-plugin-import": "^1.13.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "cross-env": "7.0.2",
-    "docz": "^2.3.1",
-    "eslint": "6.8.0",
-    "eslint-config-xhmm": "0.1.13",
-    "prettier": "2.0.5",
+    "classnames": "^2.2.6",
+    "eslint": "7.13.0",
+    "eslint-config-xhmm": "0.1.15",
+    "prettier": "2.1.2",
     "prettier-config-xhmm": "0.0.6",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.7.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "rollup": "^2.33.1",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-css-only": "^2.0.0",
+    "rollup-plugin-clear": "2.0.7",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.2",
-    "typescript": "3.8.3"
+    "rollup-plugin-postcss": "3.1.8",
+    "typescript": "4.0.5",
+    "webpack": "5.4.0"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }

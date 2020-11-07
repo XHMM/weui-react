@@ -1,0 +1,7 @@
+/* FIX weui not handle dialog title color in dark mode */
+@media (prefers-color-scheme: dark) {
+  .weui-dialog__title{
+    color: rgba(255, 255, 255, 0.68);
+  }
+}
+ 
